@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2 style="color: white;">Click on signup button to display the entered text in JSON object format</h2>
+    <div>
+        <form name="Form" onsubmit="return validateForm()" method="post"> 
+          <h2>SignUp Form</h2>
+        
+                <div> FirstName : <input type="text" id="Fname" autofocus/></div>  <div id="msg1"></div>
+                <div> LastName  : <input type="text" id="Lname" /></div>   <div id="msg2"></div>
+                <div> MiddleName: <input type="text" id="Mname"/></div>   <div id="msg3"></div>
+                <div> Phone     : <input type="tel" pattern="[0-9]{10}" id="mno"/>    </div> <div id="msg4"></div>
+                <div> Email     : <input type="email" id="email"/> </div>    <div id="msg5"></div>
+                <div> <input type="submit" value="SignUp"></div> 
+        </form>
+    </div>
+    <p id="para"></p>
+    <script src="./signup.js"></script>
+</body>
+</html>

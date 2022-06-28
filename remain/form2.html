@@ -1,0 +1,83 @@
+<html>
+<head>
+<link rel="stylesheet" href="./style.css">
+<script>
+function Errormsg(msg,printmsg){
+  document.getElementById(msg).innerHTML=printmsg;
+}
+function validateForm() {
+  let x = document.forms["Form"]["Fname"].value;
+  let y = document.forms["Form"]["Lname"].value;
+  let z = document.forms["Form"]["Mname"].value;
+  let a = document.forms["Form"]["mno"].value;
+  let b = document.forms["Form"]["email"].value;
+  if(x =="") {
+    Errormsg("msg1","please enter firstname");
+    Fname.focus();
+      return false;
+  }
+  else{
+    Errormsg("msg1","");
+  }
+ if(y =="") {
+    Errormsg("msg2","please enter lastname");
+    Lname.focus();
+      return false;
+  }  
+  else{
+    Errormsg("msg2","");
+  }
+  if(z =="") {
+    Errormsg("msg3","please enter Middlename");
+    Mname.focus();
+    return false;
+  }  
+  else{
+    Errormsg("msg3","");
+  }
+  if(a =="") {
+    Errormsg("msg4","Enter mobile number");
+    mno.focus(); 
+    return false;
+  }  
+  else{
+    Errormsg("msg4","");
+  }
+  if(b =="") {
+    Errormsg("msg5","please enter Email");
+    email.focus();
+      return false;
+  }    
+  else{
+    Errormsg("msg5","");
+  }
+
+}
+
+</script>
+</head>
+<!-- <p>To visit HTML validation Form <a href="C:\Users\Sravani\.vscode\forms.html" target="_blank">Click here</a></p> -->
+<body>
+  <h3 style="color: white;">Click on the logo to go to Home page</h3>
+  <section class="headerFlex">
+      <a href="../main.html">
+          <img src="./formImage.jpg" alt="Infomerica" class="HeaderFlex-img">
+      </a> 
+  </section>
+<div>
+<form name="Form" onsubmit="return validateForm()" method="post"> 
+  <h2>JavaScript Validation</h2>
+
+        <div> FirstName : <input type="text" id="Fname" autofocus/></div>  <div id="msg1"></div>
+        <div> LastName  : <input type="text" id="Lname" /></div>   <div id="msg2"></div>
+        <div> MiddleName: <input type="text" id="Mname"/></div>   <div id="msg3"></div>
+        <div> Phone     : <input type="tel" pattern="[0-9]{10}" id="mno"/>    </div> <div id="msg4"></div>
+        <div> Email     : <input type="email" id="email"/> </div>    <div id="msg5"></div>
+        <div> <input type="submit" value="Submit"></div>
+    
+</form>
+</div>
+
+</body>
+
+</html>
